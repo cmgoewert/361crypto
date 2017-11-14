@@ -1,20 +1,14 @@
 @import "flex";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
 
-@mixin transition-duration($time) {
-  -webkit-transition-duration: $time;
-  -moz-transition-duration: $time;
-  -ms-transition-duration: $time;
-  -o-transition-duration: $time;
-  transition-duration: $time;
-}
-
 $black: rgba(0, 0, 0, .8);
-$red: #A63D40;
-$yellow: #E9B872;
-$green: #90A959;
-$blue: #6494AA;
-$white: #fcfcfc;
+$white: rgba(255, 255, 255, .8);
+$red: #F8D7DA;
+$yellow: #FFF3CD;
+$green: #D4EDDA;
+$blue: #CCE5FF;
+$grey: #E7E8EA;
 
 $nav_width: 100px;
 
@@ -26,7 +20,7 @@ body, html {
 }
 
 body {
-  background: $white;
+  background: #FAFAFA;
   color: $black;
   font-family: 'Open Sans', sans-serif;
 }
@@ -70,43 +64,64 @@ nav {
 wrapper {
   display: block;
   margin-left: $nav_width;
-  padding: 35px;
+  padding: 35px 3vw;
 }
 
 .currency-cards {
-  @include flexbox;
-  @include justify-content(space-between);
+  margin: -10px 0 25px;
 
   .card {
     @include flexbox;
     @include justify-content(space-between);
     @include align-items(center);
-
     background: darken($white, 5);
-    width: 100%;
-    margin: 0 15px;
     padding: 35px;
     color: $black;
+    border: 1px solid;
 
-    h2.conversion {
-      font-size: 1.25rem;
-    }
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
 
-    i {
-      font-size: 40px;
-    }
+    h2.conversion { font-size: 1.25rem; }
+    i { font-size: 40px; }
 
-    &.card-blue {
-      background: $blue;
-    }
-    &.card-red {
-      background: $red;
-    }
-    &.card-yellow {
-      background: $yellow;
-    }
-    &.card-green {
-      background: $green;
+    &.card-blue { background: $blue; border-color: darken($blue, 5); }
+    &.card-red { background: $red; border-color: darken($red, 5); }
+    &.card-yellow { background: $yellow; border-color: darken($yellow, 5); }
+    &.card-green { background: $green; border-color: darken($green, 5); }
+  }
+}
+
+.panel {
+  border: 1px solid darken($grey, 5);
+
+  h2.panel-title {
+    border-radius: .28rem .28rem 0 0;
+    padding: 8px;
+    background: $grey;
+    border-bottom: 1px solid darken($grey, 5);
+    margin: 0;
+  }
+
+  ul.panel-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 .28rem .28rem;
+    background: $white;
+
+    li {
+      padding: 8px;
+      margin: 0;
+      background: $white;
+      h4, p { margin: 0; }
+      p { color: darken($grey, 30); font-size: .65rem; }
+
+      &:nth-child(2n + 1) { background: darken($white, 5); }
+
+      & + li {
+        border-top: 1px solid darken($white, 5);
+      }
     }
   }
 }
