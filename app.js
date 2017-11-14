@@ -1,11 +1,14 @@
 var app = new Vue({
   el: '#app',
-  data: {},
+  data: {
+    pageName: 'dashboard'
+  },
   computed: {
-    value() {
-      // return this.$http.get('https://www.bitstamp.net/api/v2/ticker/btcusd/', d => {
-      //   return d.last;
-      // });
+    renderedPage() {
+      const __self = this;
+      return __self.$http.get("pages/" + __self.pageName + ".html", d => {
+        return d;
+      });
     }
   }
 });
