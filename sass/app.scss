@@ -9,8 +9,7 @@
   transition-duration: $time;
 }
 
-$black: #151515;
-$transparent_black: rgba(0, 0, 0, .8);
+$black: rgba(0, 0, 0, .8);
 $red: #A63D40;
 $yellow: #E9B872;
 $green: #90A959;
@@ -37,10 +36,10 @@ h1, h2 {
 }
 
 nav {
-  background: $yellow;
-  color: $white;
+  background: $black;
   width: $nav_width;
   height: 100vh;
+  position: fixed;
 
   a {
     @include flexbox;
@@ -49,7 +48,7 @@ nav {
     @include flex-dir(column);
     height: $nav_width;
     width: $nav_width;
-    color: $transparent_black;
+    color: $white;
     text-decoration: none;
     font-family: 'Merriweather', serif;
     text-transform: uppercase;
@@ -61,16 +60,53 @@ nav {
       padding-bottom: 5px;
     }
 
-    & + a {
-      border-top: 1px solid darken($yellow, 15);
-    }
     &:hover {
-      background: darken($yellow, 15);
+      background: darken($white, 15);
+      color: $black;
     }
   }
 }
 
 wrapper {
   display: block;
-  width: calc(100vw - #{$nav_width});
+  margin-left: $nav_width;
+  padding: 35px;
+}
+
+.currency-cards {
+  @include flexbox;
+  @include justify-content(space-between);
+
+  .card {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    background: darken($white, 5);
+    width: 100%;
+    margin: 0 15px;
+    padding: 35px;
+    color: $black;
+
+    h2.conversion {
+      font-size: 1.25rem;
+    }
+
+    i {
+      font-size: 40px;
+    }
+
+    &.card-blue {
+      background: $blue;
+    }
+    &.card-red {
+      background: $red;
+    }
+    &.card-yellow {
+      background: $yellow;
+    }
+    &.card-green {
+      background: $green;
+    }
+  }
 }
