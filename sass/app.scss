@@ -1,0 +1,136 @@
+@import "flex";
+@import "mixins";
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
+
+$black: rgba(0, 0, 0, .8);
+$white: rgba(255, 255, 255, .8);
+$red: #F8D7DA;
+$yellow: #FFF3CD;
+$green: #D4EDDA;
+$blue: #CCE5FF;
+$grey: #E7E8EA;
+
+$nav_width: 100px;
+
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #FAFAFA;
+  color: $black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+}
+
+nav {
+  background: $black;
+  width: $nav_width;
+  height: 100vh;
+  position: fixed;
+
+  a, a.active:hover {
+    background: transparent;
+    color: $white;
+  }
+
+  a {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-dir(column);
+    height: $nav_width;
+    width: $nav_width;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-size: .825rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .18);
+    @include transition-duration(300ms);
+
+    i.fa {
+      font-size: 40px;
+      padding-bottom: 5px;
+    }
+
+    &:hover, &.active {
+      background: darken($white, 15);
+      color: $black;
+    }
+  }
+}
+
+wrapper {
+  display: block;
+  margin-left: $nav_width;
+  padding: 35px 3vw;
+}
+
+h1.page-heading {
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid darken($grey, 5);
+}
+
+.currency-cards {
+  margin: -10px 0 25px;
+
+  .card {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    background: darken($white, 5);
+    padding: 35px;
+    color: $black;
+    border: 1px solid;
+
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+
+    h2.conversion { font-size: 1.25rem; }
+    i { font-size: 40px; }
+
+    &.card-blue { background: $blue; border-color: darken($blue, 5); }
+    &.card-red { background: $red; border-color: darken($red, 5); }
+    &.card-yellow { background: $yellow; border-color: darken($yellow, 5); }
+    &.card-green { background: $green; border-color: darken($green, 5); }
+  }
+}
+
+.panel {
+  border: 1px solid darken($grey, 5);
+
+  h2.panel-title {
+    padding: 8px;
+    background: $grey;
+    border-bottom: 1px solid darken($grey, 5);
+    margin: 0;
+  }
+
+  ul.panel-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: $white;
+
+    li {
+      padding: 8px;
+      margin: 0;
+      background: $white;
+      h4, p { margin: 0; }
+      p { color: darken($grey, 30); font-size: .65rem; }
+
+      &:nth-child(2n + 1) { background: darken($white, 5); }
+
+      & + li {
+        border-top: 1px solid darken($white, 5);
+      }
+    }
+  }
+}
