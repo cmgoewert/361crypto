@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Open+Sans");
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%; }
+
+body {
+  background: #FAFAFA;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Open Sans', sans-serif; }
+
+h1, h2 {
+  font-family: 'Merriweather', serif; }
+
+nav {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100px;
+  height: 100vh;
+  position: fixed; }
+  nav a, nav a.active:hover {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8); }
+  nav a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100px;
+    width: 100px;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-size: .825rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms; }
+    nav a i.fa {
+      font-size: 40px;
+      padding-bottom: 5px; }
+    nav a:hover, nav a.active {
+      background: rgba(217, 217, 217, 0.8);
+      color: rgba(0, 0, 0, 0.8); }
+
+wrapper {
+  display: block;
+  margin-left: 100px;
+  padding: 35px 3vw; }
+
+h1.page-heading {
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d9dbde; }
+
+.currency-cards {
+  margin: -10px 0 25px; }
+  .currency-cards .card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    background: rgba(242, 242, 242, 0.8);
+    padding: 35px;
+    color: rgba(0, 0, 0, 0.8);
+    border: 1px solid; }
+    .currency-cards .card:first-child {
+      margin-left: 0; }
+    .currency-cards .card:last-child {
+      margin-right: 0; }
+    .currency-cards .card h2.conversion {
+      font-size: 1.25rem; }
+    .currency-cards .card i {
+      font-size: 40px; }
+    .currency-cards .card.card-blue {
+      background: #CCE5FF;
+      border-color: #b3d8ff; }
+    .currency-cards .card.card-red {
+      background: #F8D7DA;
+      border-color: #f4c1c6; }
+    .currency-cards .card.card-yellow {
+      background: #FFF3CD;
+      border-color: #ffedb4; }
+    .currency-cards .card.card-green {
+      background: #D4EDDA;
+      border-color: #c2e5cb; }
+
+.panel {
+  border: 1px solid #d9dbde; }
+  .panel h2.panel-title {
+    padding: 8px;
+    background: #E7E8EA;
+    border-bottom: 1px solid #d9dbde;
+    margin: 0; }
+  .panel ul.panel-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.8); }
+    .panel ul.panel-list li {
+      padding: 8px;
+      margin: 0;
+      background: rgba(255, 255, 255, 0.8); }
+      .panel ul.panel-list li h4, .panel ul.panel-list li p {
+        margin: 0; }
+      .panel ul.panel-list li p {
+        color: #959aa3;
+        font-size: .65rem; }
+      .panel ul.panel-list li:nth-child(2n + 1) {
+        background: rgba(242, 242, 242, 0.8); }
+      .panel ul.panel-list li + li {
+        border-top: 1px solid rgba(242, 242, 242, 0.8); }
+
+/*# sourceMappingURL=app.css.map */

@@ -107,7 +107,6 @@ h1.page-heading {
   border: 1px solid darken($grey, 5);
 
   h2.panel-title {
-    border-radius: .28rem .28rem 0 0;
     padding: 8px;
     background: $grey;
     border-bottom: 1px solid darken($grey, 5);
@@ -118,7 +117,6 @@ h1.page-heading {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    border-radius: 0 0 .28rem .28rem;
     background: $white;
 
     li {
