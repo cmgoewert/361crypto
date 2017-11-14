@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="refresh" content="0;url=pages/index.html">
-<title>SB Admin 2</title>
-<script language="javascript">
-    window.location.href = "pages/index.html"
-</script>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Document</title>
 </head>
 <body>
-Go to <a href="pages/index.html">/pages/index.html</a>
+<div id="app">
+  <nav>
+    <a href="#"><i class="fa fa-home fa-2"></i> Dashboard</a>
+    <a href="#"><i class="fa fa-area-chart"></i> Portfolio</a>
+    <a href="#"><i class="fa fa-history"></i> History</a>
+    <a href="#"><i class="fa fa-newspaper-o"></i> News</a>
+    <a href="#"><i class="fa fa-mail-reply"></i> Logout</a>
+  </nav>
+  <wrapper>
+    <div class="currency-cards">
+      <div class="card card-red"><i class="fa fa-bitcoin"></i> <span class="conversion">$7000</span></div>
+      <div class="card card-green"><i class="fa fa-bitcoin"></i> <span class="conversion">$7000</span></div>
+      <div class="card card-yellow"><i class="fa fa-bitcoin"></i> <span class="conversion">$7000</span></div>
+      <div class="card card-blue"><i class="fa fa-bitcoin"></i> <span class="conversion">$7000</span></div>
+    </div>
+  </wrapper>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

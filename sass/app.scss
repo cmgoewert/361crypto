@@ -1,0 +1,76 @@
+@import "flex";
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
+
+@mixin transition-duration($time) {
+  -webkit-transition-duration: $time;
+  -moz-transition-duration: $time;
+  -ms-transition-duration: $time;
+  -o-transition-duration: $time;
+  transition-duration: $time;
+}
+
+$black: #151515;
+$transparent_black: rgba(0, 0, 0, .8);
+$red: #A63D40;
+$yellow: #E9B872;
+$green: #90A959;
+$blue: #6494AA;
+$white: #fcfcfc;
+
+$nav_width: 100px;
+
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: $white;
+  color: $black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+}
+
+nav {
+  background: $yellow;
+  color: $white;
+  width: $nav_width;
+  height: 100vh;
+
+  a {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-dir(column);
+    height: $nav_width;
+    width: $nav_width;
+    color: $transparent_black;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-size: .825rem;
+    @include transition-duration(300ms);
+
+    i.fa {
+      font-size: 40px;
+      padding-bottom: 5px;
+    }
+
+    & + a {
+      border-top: 1px solid darken($yellow, 15);
+    }
+    &:hover {
+      background: darken($yellow, 15);
+    }
+  }
+}
+
+wrapper {
+  display: block;
+  width: calc(100vw - #{$nav_width});
+}
