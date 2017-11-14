@@ -35,6 +35,11 @@ nav {
   height: 100vh;
   position: fixed;
 
+  a, a.active:hover {
+    background: transparent;
+    color: $white;
+  }
+
   a {
     @include flexbox;
     @include justify-content(center);
@@ -42,11 +47,11 @@ nav {
     @include flex-dir(column);
     height: $nav_width;
     width: $nav_width;
-    color: $white;
     text-decoration: none;
     font-family: 'Merriweather', serif;
     text-transform: uppercase;
     font-size: .825rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .18);
     @include transition-duration(300ms);
 
     i.fa {
@@ -54,7 +59,7 @@ nav {
       padding-bottom: 5px;
     }
 
-    &:hover {
+    &:hover, &.active {
       background: darken($white, 15);
       color: $black;
     }
@@ -65,6 +70,12 @@ wrapper {
   display: block;
   margin-left: $nav_width;
   padding: 35px 3vw;
+}
+
+h1.page-heading {
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid darken($grey, 5);
 }
 
 .currency-cards {
