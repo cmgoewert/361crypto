@@ -3,9 +3,9 @@ var app = new Vue({
   data: {},
   computed: {
     value() {
-      return this.$http.get('https://www.bitstamp.net/api/v2/ticker/btcusd/', d => {
-        return d.last;
-      });
+      // return this.$http.get('https://www.bitstamp.net/api/v2/ticker/btcusd/', d => {
+      //   return d.last;
+      // });
     }
   }
 });
