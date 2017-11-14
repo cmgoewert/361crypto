@@ -129,7 +129,7 @@
 		position: absolute;
 		top: 100px;
 		left: 710px;
-		width: 150px;
+		width: 400px;
 		font-size: 14pt;
 	}
 
@@ -137,7 +137,7 @@
 		position: absolute;
 		top: 130px;
 		left: 710px;
-		width: 150px;
+		width: 400px;
 		font-size: 14pt;
 	}
 
@@ -145,7 +145,7 @@
 		position: absolute;
 		top: 160px;
 		left: 710px;
-		width: 150px;
+		width: 400px;
 		font-size: 14pt;
 	}
 
@@ -153,7 +153,7 @@
 		position: absolute;
 		top: 190px;
 		left: 710px;
-		width: 150px;
+		width: 400px;
 		font-size: 14pt;
 	}
 
@@ -161,7 +161,7 @@
 		position: absolute;
 		top: 220px;
 		left: 710px;
-		width: 150px;
+		width: 400px;
 		font-size: 14pt;
 	}
 
@@ -169,7 +169,7 @@
 		position: absolute;
 		top: 250px;
 		left: 710px;
-		width: 150px;
+		width: 400px;
 		font-size: 14pt;
 	}
 
@@ -177,7 +177,7 @@
 		position: absolute;
 		top: 280px;
 		left: 710px;
-		width: 150px;
+		width: 400px;
 		font-size: 14pt;
 	}
 
@@ -185,20 +185,133 @@
 		position: absolute;
 		top: 310px;
 		left: 710px;
-		width: 150px;
+		width: 400px;
 		font-size: 14pt;
 	}
 
 </style>
 
+<script type="text/javascript">
 
+	function placeOrderFunction() {
+
+		<!--Math.floor(Math.random()*(max-min+1)+min);-->
+		var upOrDown = Math.floor(Math.random()*(2-1+1)+1);
+		if (upOrDown==1) {
+			document.getElementById('stockStatus').src='stockdown.png';
+		}
+		else {
+			document.getElementById('stockStatus').src='stockup.png';
+		}
+
+		var cashBalanceDollar = Math.floor(Math.random()*(8000-1500+1500)+1500);
+		var cashBalanceCent = Math.floor(Math.random()*(99-10+10)+10);
+		document.getElementById('cashBalance').innerHTML='$'+cashBalanceDollar+'.'+cashBalanceCent;
+
+		var todayNetChangeDollar = Math.floor(Math.random()*(500-80+80)+80);
+		var todayNetChangeCent = Math.floor(Math.random()*(99-10+10)+10);
+		document.getElementById('todayNetChange').innerHTML='$'+todayNetChangeDollar+'.'+todayNetChangeCent;
+
+		var accountValueDollar = Math.floor(Math.random()*(200000-60000+60000)+60000);
+		var accountValueCent = Math.floor(Math.random()*(99-10+10)+10);
+		document.getElementById('accountValue').innerHTML='$'+accountValueDollar+'.'+accountValueCent;
+
+		var quantityStr = document.getElementById('quantity').value;
+		var symbolStr = document.getElementById('symbol').value;
+		var priceLimitStr = document.getElementById('priceLimit').value;
+		var marketOrLimit = '';
+		var priceLimitWithPeriod = priceLimitStr.concat('. ');
+		var buyOrSellStr = '';
+		var statusResultStr = '';
+
+		if(document.getElementById('market').checked) {
+  			marketOrLimit = ' at market. ';
+		}
+		if (document.getElementById('limit').checked) {
+			marketOrLimitPart = ' at price limit ';
+			marketOrLimit = marketOrLimitPart.concat(priceLimitWithPeriod);
+		}
+
+
+		if (document.getElementById('buy').checked) {
+			buyOrSellStr = 'Buy';
+		}
+		if (document.getElementById('sell').checked) {
+			buyOrSellStr = 'Sell';
+		}
+		var statusResult = Math.floor(Math.random()*(3-1+1)+1);
+		if (statusChoice==1) {
+			statusResultStr = buyOrSellStr+' - Open';
+		}
+		else if(statusResult==2) {
+			statusResultStr = buyOrSellStr+' - Closed';
+		}
+		else{
+			statusResultStr = buyOrSellStr+' - Fulfilled';
+		}
+
+		if (document.getElementById('order1').innerHTML=='Co. - Status') {
+			document.getElementById('order1').innerHTML=quantityStr+' of '+symbolStr+marketOrLimit+'...'+statusResultStr;
+			document.getElementById('order2').innerHTML='Co. - Status';
+			document.getElementById('order3').innerHTML='Co. - Status';
+			document.getElementById('order4').innerHTML='Co. - Status';
+			document.getElementById('order5').innerHTML='Co. - Status';
+			document.getElementById('order6').innerHTML='Co. - Status';
+			document.getElementById('order7').innerHTML='Co. - Status';
+			document.getElementById('order8').innerHTML='Co. - Status';
+		}
+		else if (document.getElementById('order2').innerHTML=='Co. - Status') {
+			document.getElementById('order2').innerHTML=quantityStr+' of '+symbolStr+marketOrLimit+'...'+statusResultStr;
+			document.getElementById('order3').innerHTML='Co. - Status';
+			document.getElementById('order4').innerHTML='Co. - Status';
+			document.getElementById('order5').innerHTML='Co. - Status';
+			document.getElementById('order6').innerHTML='Co. - Status';
+			document.getElementById('order7').innerHTML='Co. - Status';
+			document.getElementById('order8').innerHTML='Co. - Status';
+		}
+		else if (document.getElementById('order3').innerHTML=='Co. - Status') {
+			document.getElementById('order3').innerHTML=quantityStr+' of '+symbolStr+marketOrLimit+'...'+statusResultStr;
+			document.getElementById('order4').innerHTML='Co. - Status';
+			document.getElementById('order5').innerHTML='Co. - Status';
+			document.getElementById('order6').innerHTML='Co. - Status';
+			document.getElementById('order7').innerHTML='Co. - Status';
+			document.getElementById('order8').innerHTML='Co. - Status';
+		}
+		else if (document.getElementById('order4').innerHTML=='Co. - Status') {
+			document.getElementById('order4').innerHTML=quantityStr+' of '+symbolStr+marketOrLimit+'...'+statusResultStr;
+			document.getElementById('order5').innerHTML='Co. - Status';
+			document.getElementById('order6').innerHTML='Co. - Status';
+			document.getElementById('order7').innerHTML='Co. - Status';
+			document.getElementById('order8').innerHTML='Co. - Status';
+		}
+		else if (document.getElementById('order5').innerHTML=='Co. - Status') {
+			document.getElementById('order5').innerHTML=quantityStr+' of '+symbolStr+marketOrLimit+'...'+statusResultStr;
+			document.getElementById('order6').innerHTML='Co. - Status';
+			document.getElementById('order7').innerHTML='Co. - Status';
+			document.getElementById('order8').innerHTML='Co. - Status';
+		}
+		else if (document.getElementById('order6').innerHTML=='Co. - Status') {
+			document.getElementById('order6').innerHTML=quantityStr+' of '+symbolStr+marketOrLimit+'...'+statusResultStr;
+			document.getElementById('order7').innerHTML='Co. - Status';
+			document.getElementById('order8').innerHTML='Co. - Status';
+		}
+		else if (document.getElementById('order7').innerHTML=='Co. - Status') {
+			document.getElementById('order7').innerHTML=quantityStr+' of '+symbolStr+marketOrLimit+'...'+statusResultStr;
+			document.getElementById('order8').innerHTML='Co. - Status';
+		}
+		else {
+			document.getElementById('order8').innerHTML=quantityStr+' of '+symbolStr+marketOrLimit+'...'+statusResultStr;
+		}
+	}
+
+</script>
 
 	<body>
 
 		<div id='overallStock'>
 
 			<img id='stockStatus' src='stockup.png'/>
-			<p id='accountValue'>$100,000.00</p>
+			<p id='accountValue'>$100000.00</p>
 			<p id='todayNetChange'>$250.00</p>
 			<p id='accountValueLabel'>Account Value</p>
 			<p id='todayNetChangeLabel'>Today's Net Change</p>
@@ -208,24 +321,24 @@
 		<div id='tradeStock'>
 			
 			<p id='cashBalanceLabel'>Cash Balance:</p>
-			<p id='cashBalance'>$4,500</p>
+			<p id='cashBalance'>$4500.00</p>
 
 			<div id='buySellArea'>
 				
 				<form action=''>
-					<input type='radio' name='buyOrSell' value='buy'>Buy<br>
-					<input type='radio' name='buyOrSell' value='sell'>Sell<br><br><br>
+					<input type='radio' id='buy' name='buyOrSell' value='buy'>Buy<br>
+					<input type='radio' id='sell' name='buyOrSell' value='sell'>Sell<br><br><br>
 				</form>
 
 				<form action=''>
-					Quantity: <input type='text' name='quantityAndSymbol' value=''><br><br>
-					Symbol: <input type='text' name='quantityAndSymbol' value=''><br><br><br>
+					Quantity: <input type='text' id='quantity' name='quantityAndSymbol' value=''><br><br>
+					Symbol: <input type='text' id='symbol' name='quantityAndSymbol' value=''><br><br><br>
 				</form>
 
 				<form action=''>
-					<input type='radio' name='orderType' value='market'>Market<br>
-					<input type='radio' name='orderType' value='limit'>Limit<br><br>
-					Price limit: <input type='text' name='priceLimit' value=''><br><br><br>
+					<input id='market' type='radio' name='orderType' value='market'>Market<br>
+					<input id='limit' type='radio' name='orderType' value='limit'>Limit<br><br>
+					Price limit: <input id='priceLimit' type='text' name='priceLimit' value=''><br><br><br>
 				</form>
 
 				<p id='orderTypeLabel'>Order Type</p>
@@ -236,7 +349,7 @@
 				</form>
 
 				<form action=''>
-					<input id='placeOrder' type='submit' name='placeOrder' value='Place Order'>
+					<input id='placeOrder' type='button' onclick='placeOrderFunction()' name='placeOrder' value='Place Order'>
 				</form>
 
 				<p id='timeInForceLabel'>Time-in-Force</p>
