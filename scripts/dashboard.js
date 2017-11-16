@@ -7,13 +7,12 @@ $(function () {
 
   $.getJSON("https://newsapi.org/v1/articles?language=en", {
     apiKey: rsskey,
-    source: "financial-times",
-    category: "cryptocurrency"
+    source: "bloomberg",
   }, function (data) {
     let $rss = $(".rss-feed-list");
     $rss.empty();
     $.each(data.articles, function (i, item) {
-      $rss.append("<li><a href=\"" + item.url + "\">" + item.title + "</a></li>");
+      $rss.append("<li><a href=\"" + item.url + "\">" + item.title + "</a><p class=\"info\">" + item.author + "</p></li>");
     });
   });
 });

@@ -112,6 +112,8 @@ h1.page-heading {
     margin: 0;
     background: $white;
 
+    p { color: darken($grey, 30); font-size: .825rem; margin: 0; padding: 0; }
+
     li {
       padding: 8px;
       margin: 0;
