@@ -4,6 +4,71 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+form label {
+  font-weight: bold;
+  line-height: 1.3rem;
+  font-family: 'Merriweather', serif; }
+  form label + label {
+    margin-top: 15px; }
+form .actions {
+  margin-top: 10px; }
+
+input {
+  margin: 0;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: 0;
+  text-align: left;
+  line-height: 1.21428571em;
+  padding: .67857143em 1em;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: .28571429rem; }
+  input:hover {
+    border-color: #CCE5FF; }
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #E7E8EA;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 .25em 0 0;
+  padding: .78571429em 1.5em .78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: .28571429rem;
+  transition-duration: 300ms; }
+  .button:hover {
+    background: #ccced2; }
+
+table {
+  width: 100%;
+  border: 1px solid #E7E8EA; }
+  table thead {
+    text-align: left;
+    font-size: 1.125rem;
+    background: #E7E8EA; }
+    table thead th {
+      padding: 15px; }
+  table tbody {
+    font-size: 1rem; }
+    table tbody tr:nth-child(2n) {
+      background: rgba(247, 247, 247, 0.8); }
+
 body, html {
   padding: 0;
   margin: 0;
@@ -18,9 +83,15 @@ body {
 h1, h2 {
   font-family: 'Merriweather', serif; }
 
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
 nav {
   background: rgba(0, 0, 0, 0.8);
-  width: 100px;
+  width: 125px;
   height: 100vh;
   position: fixed; }
   nav a, nav a.active:hover {
@@ -48,8 +119,8 @@ nav {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 100px;
-    width: 100px;
+    height: 125px;
+    width: 125px;
     text-decoration: none;
     font-family: 'Merriweather', serif;
     text-transform: uppercase;
@@ -69,7 +140,7 @@ nav {
 
 wrapper {
   display: block;
-  margin-left: 100px;
+  margin-left: 125px;
   padding: 35px 3vw; }
 
 h1.page-heading {

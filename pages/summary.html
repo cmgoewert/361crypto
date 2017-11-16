@@ -11,45 +11,52 @@
 </head>
 <body>
 <nav>
-  <a href="dashboard.html" class="active"><i class="fa fa-home fa-2"></i> Dashboard</a>
+  <a href="dashboard.html"><i class="fa fa-home fa-2"></i> Dashboard</a>
   <a href="summary.html"><i class="fa fa-area-chart"></i> Summary</a>
   <a href="logout.html"><i class="fa fa-mail-reply"></i> Logout</a>
 </nav>
 <wrapper>
-  <h1 class="page-heading grid-100">Dashboard</h1>
+  <h1 class="page-heading grid-100">Summary</h1>
   <div class="currency-cards grid-100 grid-parent">
     <div class="grid-33">
       <div class="card card-red"><i class="fa fa-bitcoin"></i>
-        <h2 class="conversion">$<span class="btcusd">00.00</span></h2>
+        <h2 class="conversion">$<span class="btcValue">00.00</span></h2>
       </div>
     </div>
     <div class="grid-33">
-      <div class="card card-green"><i class="fa fa-bitcoin"></i>
-        <h2 class="conversion">$7000</h2>
+      <div class="card card-green"><i class="fa fa-litecoin"></i>
+        <h2 class="conversion">$<span class="ltcValue">00.00</span></h2>
       </div>
     </div>
     <div class="grid-33">
-      <div class="card card-yellow"><i class="fa fa-bitcoin"></i>
-        <h2 class="conversion">$7000</h2>
+      <div class="card card-blue"><i class="fa fa-ethereum"></i>
+        <h2 class="conversion">$<span class="ethValue">00.00</span></h2>
       </div>
     </div>
   </div>
   <div class="grid-100 grid-parent">
-    <div class="grid-75">
-      <div class="btcwdgt-chart" bw-theme="light"></div>
+    <h2 class="grid-85">Transaction History</h2>
+    <div class="grid-15 text-right">
+      <a href="#addTransaction" class="button">Add Transaction</a>
     </div>
-    <div class="grid-25">
-      <div class="panel">
-        <h2 class="panel-title">Bloomberg RSS Feed</h2>
-        <ul class="panel-list rss-feed-list">Loading....</ul>
-      </div>
+    <div class="grid-100">
+      <table class="transactions">
+        <thead>
+        <tr>
+          <th width="10%">ID</th>
+          <th>Buy/Sell</th>
+          <th>Currency</th>
+          <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
   </div>
 </wrapper>
 <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="//code.highcharts.com/highcharts.js"></script>
-<script src="//code.highcharts.com/modules/exporting.js"></script>
 <script src="//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="../scripts/app.js"></script>
+<script src="../scripts/summary.js"></script>
 </body>
 </html>

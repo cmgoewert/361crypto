@@ -1,4 +1,8 @@
 $(function () {
+  if (Cookies.get('isLoggedIn') === 'true') {
+    window.location.href = "dashboard.html";
+  }
+
   const $loginError = $(".login-error");
 
   $("form.login").on("submit", e => {

@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+  border: 1px solid $grey;
+
+  thead {
+    text-align: left;
+    font-size: 1.125rem;
+    background: $grey;
+
+    th { padding: 15px; }
+  }
+
+  tbody { font-size: 1rem;
+    tr:nth-child(2n) {
+      background: darken($white, 3);
+    }
+  }
+}
