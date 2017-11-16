@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/login.css">
+  <title>CryptoTracker</title>
+</head>
+<body>
+<wrapper>
+  <h1>CryptoTracker</h1>
+  <form class="login" method="post">
+    <h4 class="login-error">Username and password combination is invalid.</h4>
+    <label>Username
+      <input type="text" id="username" name="username" placeholder="Username">
+    </label>
+    <label>Password
+      <input type="password" id="password" name="password" placeholder="Password">
+    </label>
+    <div class="actions">
+      <a href="#register" class="register-action">Register</a>
+      <button type="button" onclick="loginClicked()">Login</button>
+    </div>
+  </form>
+</wrapper>
+
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<h1>Register:</h1>-->
+<!--<h3>Name</h3>-->
+<!--<input id="name">-->
+<!--<h3>Username</h3>-->
+<!--<input id="usernameReg">-->
+<!--<h3>Password</h3>-->
+<!--<input id="pass1">-->
+<!--<h3>Confirm password</h3>-->
+<!--<input id="pass2">-->
+<!--<button onclick="registerClicked()">Sign Up</button>-->
+<!--<h3 style="visibility:hidden;" id="regErrorLabel">Invalid registration info entered!</h3>-->
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script src="../FirebaseDB.js"></script>
+<script src="scripts/loginCntl.js"></script>
+</body>
+</html>
