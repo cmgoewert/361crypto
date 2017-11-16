@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+#btcValue {
+  position: absolute;
+  top: 0px;
+  left: 130px;
+  width: 150;
+  font-size: 30pt;
+}
+#ltcValue {
+  position: absolute;
+  top: 0px;
+  left: 290px;
+  width: 150;
+  font-size: 30pt;
+}
+#ethValue {
+  position: absolute;
+  top: 0px;
+  left: 450px;
+  width: 150;
+  font-size: 30pt;
+}
+#btcLabel {
+  position: absolute;
+  top: 100px;
+  left: 170px;
+  width: 150px;
+  font-size: 15pt;
+}
+#ltcLabel {
+  position: absolute;
+  top: 100px;
+  left: 325px;
+  width: 150px;
+  font-size: 15pt;
+}
+#ethLabel {
+  position: absolute;
+  top: 100px;
+  left: 475px;
+  width: 150px;
+  font-size: 15pt;
+}
+#Refresh {
+  position: absolute;
+  top: 150px;
+  left: 285px;
+  width: 150px;
+  font-size: 20pt;
+}
+#Add {
+  position: absolute;
+  top: 50px;
+  left: 685px;
+  width: 150px;
+  font-size: 20pt;
+}
+#orderLabel {
+  position: absolute;
+  top: 70px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
+#order1 {
+  position: absolute;
+  top: 100px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
+
+#order2 {
+  position: absolute;
+  top: 130px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
+
+#order3 {
+  position: absolute;
+  top: 160px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
+
+#order4 {
+  position: absolute;
+  top: 190px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
+
+#order5 {
+  position: absolute;
+  top: 220px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
+
+#order6 {
+  position: absolute;
+  top: 250px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
+
+#order7 {
+  position: absolute;
+  top: 280px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
+
+#order8 {
+  position: absolute;
+  top: 310px;
+  left: 710px;
+  width: 150px;
+  font-size: 14pt;
+}
