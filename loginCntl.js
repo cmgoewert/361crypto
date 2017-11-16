@@ -36,7 +36,7 @@ function authenticate(username, password){
                 var firebPass = childData.password;
 
                 if(firebUser == username && firebPass == password){
-                    window.location.href = 'index.html';
+                    window.location="https://cmgoewert.github.io./#";
                 }
 
             });
