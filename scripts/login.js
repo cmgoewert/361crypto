@@ -1,10 +1,11 @@
 $(function () {
   const $loginError = $(".login-error");
 
-  $(".login").on("submit", function (e) {
+  $("form.login").on("submit", e => {
     e.preventDefault();
     $loginError.fadeOut();
-    const username = $("input[name='username']").val(), password = $("input[name='password']").val();
+    let $passwordInput = $("input[name='password']");
+    const username = $("input[name='username']").val(), password = $passwordInput.val();
 
     authenticate(username, password, function (authenticated) {
       if (authenticated) {
@@ -13,18 +14,19 @@ $(function () {
         window.location.href = "../index.html";
       } else {
         $loginError.fadeIn();
+        $passwordInput.val('');
       }
     });
   });
 });
 
 function registerClicked() {
-  var name = document.getElementById("name").value;
-  var username = document.getElementById("usernameReg").value;
-  var pass1 = document.getElementById("pass1").value;
-  var pass2 = document.getElementById("pass2").value;
+  const name = document.getElementById("name").value,
+    username = document.getElementById("usernameReg").value,
+    pass1 = document.getElementById("pass1").value,
+    pass2 = document.getElementById("pass2").value;
 
-  if (pass1 == pass2) {
+  if (pass1 === pass2) {
     var reference = database.ref("Users/");
 
     reference.child(username).set({
@@ -37,9 +39,8 @@ function registerClicked() {
 }
 
 function authenticate(username, password, callback) {
-  var query = database.ref("Users/");
-  query.once("value").then(function (snapshot) {
-    snapshot.forEach(function (childSnapshot) {
+  database.ref("Users/").once("value").then(snapshot => {
+    snapshot.forEach(childSnapshot => {
       callback(childSnapshot.key === username && childSnapshot.val().password === password);
     });
   });
