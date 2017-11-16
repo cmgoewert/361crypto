@@ -6,10 +6,9 @@ function loginClicked () {
 
     window.alert("Inside login");
     var reference = database.ref("Users/");
-    window.alert(reference);
 
     if(authenticate(username, password)){
-
+        window.alert("authenticated");
     } else {
         document.getElementById("errorLabel").style.visibility = 'visible';
     }
@@ -24,7 +23,6 @@ function registerClicked() {
     var pass2 = document.getElementById("pass2").value;
 
     if (pass1 == pass2) {
-        window.alert("inside if");
         var reference = database.ref("Users/");
 
         reference.child(username).set({
@@ -37,8 +35,33 @@ function registerClicked() {
 }
 
 function authenticate(username, password){
+    var query = database.ref("Users/");
+    var result = false;
+    query.once("value")
+        .then(function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
 
+                var firebUser = childSnapshot.key;
+                var childData = childSnapshot.val();
+                var firebPass = childData.password;
 
+                window.alert(firebUser);
+                window.alert(username);
+                window.alert(firebPass);
+                window.alert(password);
 
-    return true;
+                window.alert(firebUser == username);
+
+                if(firebUser == username && firebPass == password){
+                    window.alert("inside if");
+                    result = true;
+
+                    return true;
+                }
+
+            });
+
+            return true;
+        });
+
 }
