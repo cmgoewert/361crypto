@@ -10,7 +10,8 @@
 <body>
 <wrapper>
   <h1>CryptoTracker</h1>
-  <form class="login" onsubmit="loginClicked()" method="post">
+  <form class="login" method="post">
+    <h4 class="login-error">Username and password combination is invalid.</h4>
     <label>Username
       <input type="text" id="username" name="username" placeholder="Username">
     </label>
@@ -24,7 +25,6 @@
   </form>
 </wrapper>
 
-<!--<h2 style="visibility:hidden;" id="errorLabel">Incorrect login info entered!</h2>-->
 <!--<br>-->
 <!--<br>-->
 <!--<br>-->
@@ -40,6 +40,8 @@
 <!--<button onclick="registerClicked()">Sign Up</button>-->
 <!--<h3 style="visibility:hidden;" id="regErrorLabel">Invalid registration info entered!</h3>-->
 
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
 <script src="FirebaseDB.js"></script>
 <script src="loginCntl.js"></script>

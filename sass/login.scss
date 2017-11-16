@@ -50,6 +50,18 @@ a.register-action {
   }
 }
 
+.login-error {
+  color: darken($red, 30);
+  position: absolute;
+  top: 0;
+  background: $red;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+
 @import "inputs";
 
 
