@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-    <script src="FirebaseDB.js"></script>
-    <script src="loginCntl.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/login.css">
+  <title>Document</title>
 </head>
 <body>
-    <h3>Username</h3>
-    <input id="username">
-    <h3>Password</h3>
-    <input id="password">
-    <button onclick="loginClicked()">Login</button>
-    <h2 style="visibility:hidden;" id="errorLabel">Incorrect login info entered!</h2>
-    <br>
-    <br>
-    <br>
-    <h1>Register:</h1>
-    <h3>Name</h3>
-    <input id="name">
-    <h3>Username</h3>
-    <input id="usernameReg">
-    <h3>Password</h3>
-    <input id="pass1">
-    <h3>Confirm password</h3>
-    <input id="pass2">
-    <button onclick="registerClicked()">Sign Up</button>
-    <h3 style="visibility:hidden;" id="regErrorLabel">Invalid registration info entered!</h3>
+<wrapper>
+  <h1>CryptoTracker</h1>
+  <form class="login" onsubmit="loginClicked()" method="post">
+    <label>Username
+      <input type="text" name="username" placeholder="Username">
+    </label>
+    <label>Password
+      <input type="password" name="password" placeholder="Password">
+    </label>
+    <div class="actions">
+      <a href="#register" class="register-action">Register</a>
+      <button>Login</button>
+    </div>
+  </form>
+</wrapper>
+
+<!--<h2 style="visibility:hidden;" id="errorLabel">Incorrect login info entered!</h2>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<h1>Register:</h1>-->
+<!--<h3>Name</h3>-->
+<!--<input id="name">-->
+<!--<h3>Username</h3>-->
+<!--<input id="usernameReg">-->
+<!--<h3>Password</h3>-->
+<!--<input id="pass1">-->
+<!--<h3>Confirm password</h3>-->
+<!--<input id="pass2">-->
+<!--<button onclick="registerClicked()">Sign Up</button>-->
+<!--<h3 style="visibility:hidden;" id="regErrorLabel">Invalid registration info entered!</h3>-->
+
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script src="FirebaseDB.js"></script>
+<script src="loginCntl.js"></script>
 </body>
 </html>

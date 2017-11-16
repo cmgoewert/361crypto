@@ -1,0 +1,57 @@
+form {
+  label {
+    font-weight: bold;
+    line-height: 1.3rem;
+    font-family: 'Merriweather', serif;
+
+    & + label { margin-top: 15px; }
+  }
+
+  .actions {
+    margin-top: 10px;
+  }
+}
+
+input {
+  margin: 0;
+  max-width: 100%;
+  @include flexbox;
+  outline: 0;
+  text-align: left;
+  line-height: 1.21428571em;
+  padding: .67857143em 1em;
+  background: $white;
+  border: 1px solid rgba(34, 36, 38, .15);
+  color: $black;
+  border-radius: .28571429rem;
+
+  &:hover {
+    border-color: $blue;
+  }
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: $grey;
+  color: rgba(0, 0, 0, .6);
+  margin: 0 .25em 0 0;
+  padding: .78571429em 1.5em .78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: .28571429rem;
+  transition-duration: 300ms;
+
+  &:hover {
+    background: darken($grey, 10);
+  }
+}

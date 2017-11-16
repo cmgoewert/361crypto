@@ -1,0 +1,55 @@
+@import "flex";
+@import "vars";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: $white;
+  color: $black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+}
+
+wrapper {
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-dir(column);
+  height: 100vh;
+}
+
+form.login {
+  width: 300px;
+  background: white;
+  padding: 35px;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
+  border: 1px solid rgba(34, 36, 38, .15);
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-dir(column);
+}
+
+a.register-action {
+  font-size: .825rem;
+  text-decoration: none;
+  color: darken($blue, 20);
+  display: inline-block;
+  margin-right: 15px;
+
+  &:hover {
+    color: darken($blue, 30);
+  }
+}
+
+@import "inputs";
+
+
