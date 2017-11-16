@@ -4,18 +4,7 @@ function loginClicked () {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    window.alert("Inside login");
-    var reference = database.ref("Users/");
-
-    if(authenticate(username, password)){
-        window.alert("authenticated");
-    } else {
-        document.getElementById("errorLabel").style.visibility = 'visible';
-    }
-
-
-    return true;
-
+    authenticate(username, password);
 }
 
 function registerClicked() {
@@ -38,7 +27,6 @@ function registerClicked() {
 
 function authenticate(username, password){
     var query = database.ref("Users/");
-    var result = false;
     query.once("value")
         .then(function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
@@ -47,23 +35,10 @@ function authenticate(username, password){
                 var childData = childSnapshot.val();
                 var firebPass = childData.password;
 
-                window.alert(firebUser);
-                window.alert(username);
-                window.alert(firebPass);
-                window.alert(password);
-
-                window.alert(firebUser == username);
-
                 if(firebUser == username && firebPass == password){
-                    window.alert("inside if");
-                    result = true;
-
-                    return true;
+                    window.location.href = 'index.html';
                 }
 
             });
-
-            return true;
         });
-
 }
