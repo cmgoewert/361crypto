@@ -14,6 +14,8 @@ function loginClicked () {
     }
 
 
+    return true;
+
 }
 
 function registerClicked() {
