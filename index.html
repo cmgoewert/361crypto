@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles/app.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/unsemantic/1.1.3/unsemantic-grid-responsive.min.css"/>
-  <title>Document</title>
+  <title>CryptoTracker</title>
 </head>
 <body>
 <nav>
@@ -45,25 +45,10 @@
     <div class="grid-75">
       <div class="btcwdgt-chart" bw-theme="light"></div>
     </div>
-    <div class="grid-25 grid-parent">
-      <div class="grid-100">
-        <div class="panel">
-          <h2 class="panel-title">RSS Feed</h2>
-          <ul class="panel-list">
-            <li>
-              <h4>News Article 1</h4>
-              <p class="info">Posted 2 hours ago - NY Times</p>
-            </li>
-            <li>
-              <h4>News Article 2</h4>
-              <p class="info">Posted 2 hours ago - NY Times</p>
-            </li>
-            <li>
-              <h4>News Article 3</h4>
-              <p class="info">Posted 2 hours ago - NY Times</p>
-            </li>
-          </ul>
-        </div>
+    <div class="grid-25">
+      <div class="panel">
+        <h2 class="panel-title">Financial Times RSS Feed</h2>
+        <ul class="panel-list rss-feed-list">Loading....</ul>
       </div>
     </div>
   </div>
@@ -71,7 +56,6 @@
 <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="//code.highcharts.com/highcharts.js"></script>
 <script src="//code.highcharts.com/modules/exporting.js"></script>
-<script src="//feed.surfing-waves.com/js/rss-feed.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/widgets.js"></script>
 </body>
