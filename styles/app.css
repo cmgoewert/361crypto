@@ -6,7 +6,7 @@ body, html {
   width: 100%; }
 
 body {
-  background: #FAFAFA;
+  background: rgba(255, 255, 255, 0.8);
   color: rgba(0, 0, 0, 0.8);
   font-family: 'Open Sans', sans-serif; }
 
@@ -118,6 +118,7 @@ h1.page-heading {
 .panel {
   border: 1px solid #d9dbde; }
   .panel h2.panel-title {
+    font-size: 1rem;
     padding: 8px;
     background: #E7E8EA;
     border-bottom: 1px solid #d9dbde;
@@ -131,11 +132,13 @@ h1.page-heading {
       padding: 8px;
       margin: 0;
       background: rgba(255, 255, 255, 0.8); }
-      .panel ul.panel-list li h4, .panel ul.panel-list li p {
-        margin: 0; }
-      .panel ul.panel-list li p {
-        color: #959aa3;
-        font-size: .65rem; }
+      .panel ul.panel-list li a {
+        font-size: .825rem;
+        margin: 0;
+        color: #66b1ff;
+        text-decoration: none; }
+        .panel ul.panel-list li a:hover {
+          color: #3397ff; }
       .panel ul.panel-list li:nth-child(2n + 1) {
         background: rgba(242, 242, 242, 0.8); }
       .panel ul.panel-list li + li {

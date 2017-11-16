@@ -99,6 +99,7 @@ h1.page-heading {
   border: 1px solid darken($grey, 5);
 
   h2.panel-title {
+    font-size: 1rem;
     padding: 8px;
     background: $grey;
     border-bottom: 1px solid darken($grey, 5);
@@ -115,8 +116,17 @@ h1.page-heading {
       padding: 8px;
       margin: 0;
       background: $white;
-      h4, p { margin: 0; }
-      p { color: darken($grey, 30); font-size: .65rem; }
+
+      a {
+        font-size: .825rem;
+        margin: 0;
+        color: darken($blue, 20);
+        text-decoration: none;
+
+        &:hover {
+          color: darken($blue, 30);
+        }
+      }
 
       &:nth-child(2n + 1) { background: darken($white, 5); }
 
