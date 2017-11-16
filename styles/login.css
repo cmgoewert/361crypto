@@ -42,7 +42,7 @@ wrapper {
   flex-direction: column;
   height: 100vh; }
 
-form.login {
+form {
   width: 300px;
   background: white;
   padding: 35px;
@@ -79,7 +79,7 @@ a.register-action {
   a.register-action:hover {
     color: #3397ff; }
 
-.login-error {
+.error {
   color: #e15562;
   position: absolute;
   top: 0;
@@ -118,7 +118,7 @@ input {
   input:hover {
     border-color: #CCE5FF; }
 
-button {
+.button {
   cursor: pointer;
   display: inline-block;
   min-height: 1em;
@@ -138,7 +138,7 @@ button {
   text-decoration: none;
   border-radius: .28571429rem;
   transition-duration: 300ms; }
-  button:hover {
+  .button:hover {
     background: #ccced2; }
 
 /*# sourceMappingURL=login.css.map */

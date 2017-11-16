@@ -22,25 +22,27 @@ $(function () {
       }
     });
   });
+
+  $("form.register").on("submit", function (e) {
+    e.preventDefault();
+
+    const name = $("input[name='name']").val(),
+      username = $("input[name='usernameReg']").val(),
+      pass1 = $("input[name='pass1']").val(),
+      pass2 = $("input[name='pass2']").val();
+
+    if (pass1 === pass2) {
+      var reference = database.ref("Users/");
+
+      reference.child(username).set({
+        name: name,
+        password: pass1
+      });
+    } else {
+      document.getElementById("regErrorLabel").style.visibility = 'visible';
+    }
+  });
 });
-
-function registerClicked() {
-  const name = document.getElementById("name").value,
-    username = document.getElementById("usernameReg").value,
-    pass1 = document.getElementById("pass1").value,
-    pass2 = document.getElementById("pass2").value;
-
-  if (pass1 === pass2) {
-    var reference = database.ref("Users/");
-
-    reference.child(username).set({
-      name: name,
-      password: pass1
-    });
-  } else {
-    document.getElementById("regErrorLabel").style.visibility = 'visible';
-  }
-}
 
 function authenticate(username, password, callback) {
   database.ref("Users/").once("value").then(snapshot => {

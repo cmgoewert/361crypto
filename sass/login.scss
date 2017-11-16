@@ -26,7 +26,7 @@ wrapper {
   height: 100vh;
 }
 
-form.login {
+form {
   width: 300px;
   background: white;
   padding: 35px;
@@ -50,7 +50,7 @@ a.register-action {
   }
 }
 
-.login-error {
+.error {
   color: darken($red, 30);
   position: absolute;
   top: 0;

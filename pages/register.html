@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/login.css">
+  <title>CryptoTracker</title>
+</head>
+<body>
+<wrapper>
+  <h1>CryptoTracker</h1>
+  <form class="register" method="post">
+    <h4 class="register-error error">Username and password combination is invalid.</h4>
+    <label>Name
+      <input type="text" name="name">
+    </label>
+    <label>Username
+      <input type="text" name="usernameReg">
+    </label>
+    <label>Password
+      <input type="password" name="pass1">
+    </label>
+    <label>Confirm password
+      <input type="password" name="pass2">
+    </label>
+    <div class="actions">
+      <a href="login.html" class="register-action">Back To Login</a>
+      <button class="button">Sign Up</button>
+    </div>
+  </form>
+</wrapper>
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script src="../scripts/FirebaseDB.js"></script>
+<script src="../scripts/login.js"></script>
+</body>
+</html>
