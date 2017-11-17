@@ -11,6 +11,8 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-function getCurrUser(username){
-
+function getCurrUser(username, callback) {
+    database.ref("Users/" + username).once("value").then(snapshot => {
+        callback(snapshot.val());
+    });
 }

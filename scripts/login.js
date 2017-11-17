@@ -11,6 +11,13 @@ $(function () {
     let $passwordInput = $("input[name='password']");
     const username = $("input[name='username']").val(), password = $passwordInput.val();
 
+    //example of how to call getuser
+    getCurrUser(username, function (user) {
+        //window.alert(user);
+        //do something with the user object here, it will user.name, user.password, 
+        //user.transactions(which will be an array of transaction objects)
+    });
+
     authenticate(username, password, function (authenticated) {
       if (authenticated) {
         Cookies.set('isLoggedIn', 'true');
@@ -51,3 +58,4 @@ function authenticate(username, password, callback) {
     });
   });
 }
+
