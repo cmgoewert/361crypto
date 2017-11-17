@@ -32,6 +32,13 @@ $(function () {
 //Array to store transactions. Transactions can be added using .push()
 let transactionsArray = [];
 
+
+getCurrUser("test", function (user) {
+    window.alert(user.name);
+    transactionsArray = user.transactions;
+    window.alert(transactionsArray[0].amount);
+});
+
 //A transaction object to temporarily store a transaction and its details befor being added to the array
 
 //Create a new transaction and add to the transactions array
