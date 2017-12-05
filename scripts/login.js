@@ -46,7 +46,7 @@ $(function () {
         password: pass1
       });
       
-      window.location.href = "../index/html";
+      window.location.href = "../index.html";
     } else {
      $(".register-error.error").style.visibility = 'visible';
     }
