@@ -45,6 +45,8 @@ $(function () {
         name: name,
         password: pass1
       });
+      
+      window.location.href = "/";
     } else {
       document.getElementById("regErrorLabel").style.visibility = 'visible';
     }
