@@ -1,8 +1,4 @@
 $(function () {
-  $.getJSON("https://api.coindesk.com/v1/bpi/currentprice.json", d => {
-    $(".conversion .btcusd").html(d.bpi.USD.rate)
-  });
-
   $.getJSON("https://newsapi.org/v1/articles?language=en", {
     apiKey: rsskey,
     source: "bloomberg",
