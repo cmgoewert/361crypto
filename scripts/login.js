@@ -38,7 +38,7 @@ $(function () {
       pass1 = $("input[name='pass1']").val(),
       pass2 = $("input[name='pass2']").val();
 
-    if (pass1 === pass2) {
+    if (username && name && pass1 && pass2 && pass1 === pass2) {
       var reference = database.ref("Users/");
 
       reference.child(username).set({
