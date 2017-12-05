@@ -46,9 +46,9 @@ $(function () {
         password: pass1
       });
       
-      window.location.href = "/";
+      window.location.href = "../index/html";
     } else {
-      document.getElementById("regErrorLabel").style.visibility = 'visible';
+     $(".register-error.error").style.visibility = 'visible';
     }
   });
 });
