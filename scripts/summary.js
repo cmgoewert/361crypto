@@ -18,12 +18,8 @@ let transaction = {
 };
 
 $(function () {
-  $('.btcValue').html((btcOwned * btcRate).toFixed(2));
-  $('.ltcValue').html((ltcOwned * ltcRate).toFixed(2));
-  $('.ethValue').html((ethOwned * ethRate).toFixed(2));
-
   $("a[href='#addTransaction']").on('click', function () {
-    $("table.transactions tbody").append("<tr><td>" + transaction.counter + "</td><td>" + transaction.type + "</td><td>" + transaction.currency + "</td><td>" + transaction.amount + "</td></tr>");
+    $("table.transactions tbody").append("<tr><td>" + transaction.counter + "</td><td>" + transaction.type + "</td><td>" + transaction.currency + "</td><td>" + Math.floor((Math.random() * 10) + 1) + "</td></tr>");
     transaction.counter++;
   });
 });
