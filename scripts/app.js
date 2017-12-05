@@ -4,4 +4,8 @@ $(function () {
   if (Cookies.get('isLoggedIn') !== 'true') {
     window.location.href = "../index.html";
   }
+  
+   $.getJSON("https://api.coindesk.com/v1/bpi/currentprice.json", d => {
+    $(".conversion .btcusd").html(d.bpi.USD.rate)
+  });
 });
