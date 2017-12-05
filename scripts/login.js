@@ -48,7 +48,7 @@ $(function () {
       
       window.location.href = "../index.html";
     } else {
-     $(".register-error.error").style.visibility = 'visible';
+     $(".register-error.error").fadeIn();
     }
   });
 });
