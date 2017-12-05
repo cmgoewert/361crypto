@@ -16,3 +16,8 @@ function getCurrUser(username, callback) {
         callback(snapshot.val());
     });
 }
+
+function updateTransactions(username, transactions) {
+    console.log("in updateTrans");
+    database.ref("Users/"+username+"/transactions").set(transactions);
+}
