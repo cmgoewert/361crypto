@@ -8,6 +8,7 @@ var config = {
     storageBucket: "cryptotracker-bb2f2.appspot.com",
     messagingSenderId: "839599671002"
 };
+
 firebase.initializeApp(config);
 var database = firebase.database();
 
@@ -17,11 +18,14 @@ function getCurrUser(username, callback) {
     });
 }
 
-function updateTransactions(username, transactions) {
+function updateTransactions(username, transaction) {
     console.log("in updateTrans");
-    database.ref("Users/"+username+"/transactions").set(transactions);
-}
+    getTransactions(username, function(transactions) {
+        transactions.push(transaction);
+        database.ref("Users/"+username+"/transactions").set(transactions);
+    });
 
+}
 
 // call like this
 // getTransactions("test", function (transactions) {
