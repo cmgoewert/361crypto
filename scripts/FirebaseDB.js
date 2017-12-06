@@ -21,3 +21,14 @@ function updateTransactions(username, transactions) {
     console.log("in updateTrans");
     database.ref("Users/"+username+"/transactions").set(transactions);
 }
+
+
+// call like this
+// getTransactions("test", function (transactions) {
+//     window.alert(transactions[0].amount);
+// });
+function getTransactions(username, callback) {
+    database.ref("Users/"+username+"/transactions").once("value").then(snapshot => {
+        callback(snapshot.val());
+    });
+}
