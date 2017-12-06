@@ -225,4 +225,61 @@ h1.page-heading {
       .panel ul.panel-list li + li {
         border-top: 1px solid rgba(242, 242, 242, 0.8); }
 
+img.stock-status {
+  width: 60px;
+  height: 45px;
+  opacity: 1.0; }
+
+#tradeStock {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 600px;
+  height: 120px;
+  color: black;
+  font-family: sans-serif;
+  background-color: lightgray; }
+
+#buySellArea {
+  padding: 20px;
+  box-sizing: border-box;
+  left: 140px;
+  width: 460px;
+  top: 0px;
+  height: 400px;
+  color: white;
+  font-family: sans-serif;
+  background-color: gray;
+  opacity: 1.0; }
+
+.order {
+  width: 400px;
+  font-size: 14pt; }
+
+.account {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  text-align: center;
+  background: #E7E8EA;
+  margin-bottom: 25px;
+  border-radius: 8px; }
+
+input[type="radio"] {
+  display: inline; }
+
+label {
+  display: block; }
+
 /*# sourceMappingURL=app.css.map */

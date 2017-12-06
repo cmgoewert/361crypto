@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http:www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/app.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/unsemantic/1.1.3/unsemantic-grid-responsive.min.css"/>
+  <title>CryptoTracker</title>
+</head>
+<body>
+<nav>
+  <a href="dashboard.html"><i class="fa fa-home fa-2"></i> Dashboard</a>
+  <a href="summary.html"><i class="fa fa-area-chart"></i> Summary</a>
+  <a href="transactions.html" class="active"><i class="fa fa-exchange"></i> Transactions</a>
+  <a href="logout.html"><i class="fa fa-mail-reply"></i> Logout</a>
+</nav>
+<wrapper>
+  <h1 class="page-heading grid-100">Transactions</h1>
+  <div class="grid-100 account">
+    <img class="stock-status" src="../images/stockup.png"/>
+    <h2 id='accountValue'> Account Value: <br><small>$100000.00</small></h2>
+    <h2 id='todayNetChange'> Today's Net Change: <br><small>$250.00</small></h2>
+    <h2 id='cashBalanceLabel'> Cash Balance: <br><small id='cashBalance'> $4500.00</small></h2>
+  </div>
+  <form class="grid-100 grid-parent place-order-form">
+    <div class="grid-25">
+      <label>
+        <input type='radio' id='buy' name='buyOrSell' value='buy'> Buy
+      </label>
+      <label>
+        <input type='radio' id='sell' name='buyOrSell' value='sell'> Sell
+      </label>
+    </div>
+    <div class="grid-25">
+      <label>
+        Quantity: <input type='text' id='quantity' name='quantityAndSymbol' value=''>
+      </label>
+      <label>
+        Symbol: <input type='text' id='symbol' name='quantityAndSymbol' value=''>
+      </label>
+    </div>
+    <div class="grid-25">
+      <label>
+        <input id='market' type='radio' name='orderType' value='market'> Market
+      </label>
+      <label>
+        <input id='limit' type='radio' name='orderType' value='limit'> Limit
+      </label>
+      <label>
+        Price limit: <input id='priceLimit' type='text' name='priceLimit' value=''>
+      </label>
+    </div>
+    <div class="grid-25">
+      <label>
+        <input type='radio' name='timeInForce' value='day'> Day
+      </label>
+      <label>
+        <input type='radio' name='timeInForce' value='marketOnClose'> Market on close
+      </label>
+    </div>
+    <div class="grid-100 text-center">
+      <br>
+      <button id='placeOrder' class="button" name='placeOrder'>Place Order</button>
+    </div>
+  </form>
+</wrapper>
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script src="../scripts/app.js"></script>
+<script src="../scripts/FirebaseDB.js"></script>
+<script src="../scripts/transactions.js"></script>
+</body>
+</html>
