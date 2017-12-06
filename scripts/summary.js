@@ -1,6 +1,17 @@
-function newTransaction(currency, amount, type) {
-  $("a[href='#addTransaction']").on('click', function () {
-    $("table.transactions tbody").append("<tr><td>" + transaction.counter + "</td><td>" + transaction.type + "</td><td>" + transaction.currency + "</td><td>" + Math.floor((Math.random() * 10) + 1) + "</td></tr>");
-    transaction.counter++;
-  });
+let counter = 0;
+
+function newTransaction(transaction) {
+  let btcusd = parseInt($(".btcusd").html().replace(',', ''));
+
+  $("table.transactions tbody").append("<tr><td>" + counter + "</td><td>BTC</td><td>" + transaction.amount + "</td><td>$" + transaction.buyPrice + "</td><td>$" + (transaction.amount * btcusd) + "</td></tr>");
+  counter++;
 }
+
+$(function () {
+  getTransactions(Cookies.get('username'), function (data) {
+    data.forEach(function (val, index) {
+      counter = index;
+      newTransaction(val);
+    });
+  });
+});

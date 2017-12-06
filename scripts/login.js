@@ -13,9 +13,9 @@ $(function () {
 
     //example of how to call getuser
     getCurrUser(username, function (user) {
-        //window.alert(user);
-        //do something with the user object here, it will user.name, user.password, 
-        //user.transactions(which will be an array of transaction objects)
+      //window.alert(user);
+      //do something with the user object here, it will user.name, user.password,
+      //user.transactions(which will be an array of transaction objects)
     });
 
     authenticate(username, password, function (authenticated) {
@@ -45,10 +45,10 @@ $(function () {
         name: name,
         password: pass1
       });
-      
+
       window.location.href = "../index.html";
     } else {
-     $(".register-error.error").fadeIn();
+      $(".register-error.error").fadeIn();
     }
   });
 });
